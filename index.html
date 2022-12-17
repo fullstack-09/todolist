@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do</title>
+  </head>
+  <body>
+    <!-- Toast -->
+    <div class="toast hide">
+      <div class="toast-header">
+        <h2>WARNING !</h2>
+        <i class="bx bx-x"></i>
+      </div>
+      <div class="toast-body">
+        <p>Veuillez saisir tous les champs necessaires</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="title">To do List</h2>
+      <form class="todo-form">
+        <div class="floating-form">
+          <input
+            type="text"
+            class="form-control"
+            id="task"
+            name="task"
+            placeholder="Enter the description of new task"
+          />
+          <label for="task">Task</label>
+        </div>
+        <div class="floating-form">
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            placeholder="Enter the description of new task"
+          />
+          <label for="date" class="after-focus">Due date</label>
+        </div>
+
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="list-header">
+        <h3>Task List</h3>
+        <h3>Due Date</h3>
+        <button class="btn btn-danger" id="clear" title="Remove all">
+          <i class="bx bx-trash"></i>
+        </button>
+      </div>
+      <ul class="task-list"></ul>
+    </div>
+    <!-- js -->
+    <script src="main.js"></script>
+  </body>
+</html>
